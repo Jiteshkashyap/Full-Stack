@@ -20,12 +20,12 @@ const orderChartData = [
 export default function Dashboard() {
   return (
     <div className="space-y-8">
-      {/* PAGE TITLE */}
+      
       <h1 className="text-2xl font-semibold text-gray-800">
         Dashboard
       </h1>
 
-      {/* STATS CARDS */}
+      
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <StatCard title="Total Users" value="120" />
         <StatCard title="Total Drivers" value="25" />
@@ -33,9 +33,9 @@ export default function Dashboard() {
         <StatCard title="Total Products" value="80" />
       </div>
 
-      {/* CHART SECTION */}
+      
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* ORDERS CHART */}
+    
         <div className="lg:col-span-2 bg-white rounded-xl shadow p-6">
           <h2 className="text-lg font-semibold mb-4">
             Orders This Week
@@ -58,7 +58,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* SIDE CARD */}
+       
         <div className="bg-white rounded-xl shadow p-6">
           <h2 className="text-lg font-semibold mb-4">
             Live Summary

@@ -47,7 +47,7 @@ const statusStyle = (status) =>
 export default function LiveDrivers() {
   return (
     <div className="p-6 bg-gray-100 h-full">
-      {/* HEADER */}
+     
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-xl font-semibold">Live Drivers</h1>
 
@@ -56,7 +56,7 @@ export default function LiveDrivers() {
         </span>
       </div>
 
-      {/* TABLE */}
+    
       <div className="bg-white rounded border overflow-x-auto">
 
         <table className="w-full text-sm">

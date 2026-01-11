@@ -1,0 +1,653 @@
+{
+	"info": {
+		"_postman_id": "4a6960d5-914e-4824-a4e0-450b81e6d7ec",
+		"name": "FullStack",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43033509",
+		"_collection_link": "https://my3333-5171.postman.co/workspace/Assignment~5e73b060-e96e-45b1-809d-a963bdc4396e/collection/43033509-4a6960d5-914e-4824-a4e0-450b81e6d7ec?action=share&source=collection_link&creator=43033509"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:8000/api/admin/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTVmY2Q5YjI4NzEyMzI1NTRlMzQzNTUiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTc2Nzg4NjI5MywiZXhwIjoxNzY3OTcyNjkzfQ.BxYsvtW1Sw0ZwxZRDSy926sHfZ7vZLsBjq7tqd7yyN0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "shoes",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/category/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"category",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTVmY2Q5YjI4NzEyMzI1NTRlMzQzNTUiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTc2Nzg4NjI5MywiZXhwIjoxNzY3OTcyNjkzfQ.BxYsvtW1Sw0ZwxZRDSy926sHfZ7vZLsBjq7tqd7yyN0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/api/category/categories/getAll?A",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"category",
+								"categories",
+								"getAll"
+							],
+							"query": [
+								{
+									"key": "A",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTVmY2Q5YjI4NzEyMzI1NTRlMzQzNTUiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTc2Nzg4NjI5MywiZXhwIjoxNzY3OTcyNjkzfQ.BxYsvtW1Sw0ZwxZRDSy926sHfZ7vZLsBjq7tqd7yyN0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:8000/api/category/categories/:categoryId/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"category",
+								"categories",
+								":categoryId",
+								"update"
+							],
+							"variable": [
+								{
+									"key": "categoryId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTVmY2Q5YjI4NzEyMzI1NTRlMzQzNTUiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTc2Nzg4NjI5MywiZXhwIjoxNzY3OTcyNjkzfQ.BxYsvtW1Sw0ZwxZRDSy926sHfZ7vZLsBjq7tqd7yyN0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/category/categories/:categoryId/delete",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"category",
+								"categories",
+								":categoryId",
+								"delete"
+							],
+							"variable": [
+								{
+									"key": "categoryId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "subCategory",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTVmY2Q5YjI4NzEyMzI1NTRlMzQzNTUiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTc2Nzg4NjI5MywiZXhwIjoxNzY3OTcyNjkzfQ.BxYsvtW1Sw0ZwxZRDSy926sHfZ7vZLsBjq7tqd7yyN0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:8000/api/subCategory/categories/695fd30991de7c35848e8522/subcategories/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"subCategory",
+								"categories",
+								"695fd30991de7c35848e8522",
+								"subcategories",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTVmY2Q5YjI4NzEyMzI1NTRlMzQzNTUiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTc2Nzg4NjI5MywiZXhwIjoxNzY3OTcyNjkzfQ.BxYsvtW1Sw0ZwxZRDSy926sHfZ7vZLsBjq7tqd7yyN0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Table",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/subCategory/categories/695fd31291de7c35848e8525/subcategories/6960b9e1a1844fdceca071bd/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"subCategory",
+								"categories",
+								"695fd31291de7c35848e8525",
+								"subcategories",
+								"6960b9e1a1844fdceca071bd",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTVmY2Q5YjI4NzEyMzI1NTRlMzQzNTUiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTc2Nzg4NjI5MywiZXhwIjoxNzY3OTcyNjkzfQ.BxYsvtW1Sw0ZwxZRDSy926sHfZ7vZLsBjq7tqd7yyN0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:8000/api/subCategory/categories/:categoryId/subcategories/:subCategoryId/delete",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"subCategory",
+								"categories",
+								":categoryId",
+								"subcategories",
+								":subCategoryId",
+								"delete"
+							],
+							"variable": [
+								{
+									"key": "categoryId",
+									"value": ""
+								},
+								{
+									"key": "subCategoryId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTVmY2Q5YjI4NzEyMzI1NTRlMzQzNTUiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTc2Nzg4NjI5MywiZXhwIjoxNzY3OTcyNjkzfQ.BxYsvtW1Sw0ZwxZRDSy926sHfZ7vZLsBjq7tqd7yyN0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:8000/api/subCategory/categories/:categoryId/subcategories/list",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"subCategory",
+								"categories",
+								":categoryId",
+								"subcategories",
+								"list"
+							],
+							"variable": [
+								{
+									"key": "categoryId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSingle",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTVmY2Q5YjI4NzEyMzI1NTRlMzQzNTUiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTc2Nzg4NjI5MywiZXhwIjoxNzY3OTcyNjkzfQ.BxYsvtW1Sw0ZwxZRDSy926sHfZ7vZLsBjq7tqd7yyN0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:8000/api/subCategory/categories/:categoryId/subcategories/:subCategoryId/single",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"subCategory",
+								"categories",
+								":categoryId",
+								"subcategories",
+								":subCategoryId",
+								"single"
+							],
+							"variable": [
+								{
+									"key": "categoryId",
+									"value": ""
+								},
+								{
+									"key": "subCategoryId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTVmY2Q5YjI4NzEyMzI1NTRlMzQzNTUiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTc2Nzk0NjI2NiwiZXhwIjoxNzY4MDMyNjY2fQ.YwvMjQ1VQV62OmGSDYvLNXmMiobCtJNOeOVgkSYl6rI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:8000/api/product/categories/695fd31291de7c35848e8525/subcategories/6960b9e1a1844fdceca071bd/products",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"product",
+								"categories",
+								"695fd31291de7c35848e8525",
+								"subcategories",
+								"6960b9e1a1844fdceca071bd",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:8000/api/product/categories/:categoryId/subcategories/:subCategoryId/Products/:productId/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"product",
+								"categories",
+								":categoryId",
+								"subcategories",
+								":subCategoryId",
+								"Products",
+								":productId",
+								"update"
+							],
+							"variable": [
+								{
+									"key": "categoryId",
+									"value": ""
+								},
+								{
+									"key": "subCategoryId",
+									"value": ""
+								},
+								{
+									"key": "productId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTVmY2Q5YjI4NzEyMzI1NTRlMzQzNTUiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTc2ODAzODc0MSwiZXhwIjoxNzY4MTI1MTQxfQ.hau6Xbd2KijJRHfqYP_bZ1DLoojFV2O_hCNuBK_BB7Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:8000/api/product/categories/695fd31291de7c35848e8525/subcategories/6960b9e1a1844fdceca071bd/allProducts",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"product",
+								"categories",
+								"695fd31291de7c35848e8525",
+								"subcategories",
+								"6960b9e1a1844fdceca071bd",
+								"allProducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSingle",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTVmY2Q5YjI4NzEyMzI1NTRlMzQzNTUiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTc2Nzk0NjI2NiwiZXhwIjoxNzY4MDMyNjY2fQ.YwvMjQ1VQV62OmGSDYvLNXmMiobCtJNOeOVgkSYl6rI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:8000/api/product/categories/695fd31291de7c35848e8525/subcategories/6960b9e1a1844fdceca071bd/Products/6960c49f698962f165276752",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"product",
+								"categories",
+								"695fd31291de7c35848e8525",
+								"subcategories",
+								"6960b9e1a1844fdceca071bd",
+								"Products",
+								"6960c49f698962f165276752"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTVmY2Q5YjI4NzEyMzI1NTRlMzQzNTUiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTc2Nzk0NjI2NiwiZXhwIjoxNzY4MDMyNjY2fQ.YwvMjQ1VQV62OmGSDYvLNXmMiobCtJNOeOVgkSYl6rI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:8080/api/product/categories/:categoryId/subcategories/:subCategoryId/Products/:productId/delete",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product",
+								"categories",
+								":categoryId",
+								"subcategories",
+								":subCategoryId",
+								"Products",
+								":productId",
+								"delete"
+							],
+							"variable": [
+								{
+									"key": "categoryId",
+									"value": ""
+								},
+								{
+									"key": "subCategoryId",
+									"value": ""
+								},
+								{
+									"key": "productId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTVmY2Q5YjI4NzEyMzI1NTRlMzQzNTUiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTc2ODAzODc0MSwiZXhwIjoxNzY4MTI1MTQxfQ.hau6Xbd2KijJRHfqYP_bZ1DLoojFV2O_hCNuBK_BB7Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:8000/api/product/all",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"product",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

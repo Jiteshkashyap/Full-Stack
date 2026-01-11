@@ -39,7 +39,7 @@ export default function ProductDetails({ openModal }) {
         </h1>
 
         <div className="flex gap-2">
-  {/* EDIT */}
+  
   <button
     className="px-4 py-2 border rounded-md text-sm"
     onClick={() =>
@@ -53,7 +53,7 @@ export default function ProductDetails({ openModal }) {
     Edit
   </button>
 
-  {/* DELETE */}
+  
   <button
     className="px-4 py-2 border border-red-500 text-red-600 rounded-md text-sm"
     onClick={() => {
@@ -69,7 +69,7 @@ export default function ProductDetails({ openModal }) {
     Delete
   </button>
 
-  {/* ACTIVATE / DEACTIVATE */}
+  
   <button
   className="px-4 py-2 border rounded-md text-sm"
   onClick={async () => {
@@ -84,7 +84,7 @@ export default function ProductDetails({ openModal }) {
         formData
       );
 
-      // update redux AFTER backend success
+      // update redux after backend 
       dispatch(toggleProductStatus(selectedProduct._id));
     } catch (err) {
       console.log(err)

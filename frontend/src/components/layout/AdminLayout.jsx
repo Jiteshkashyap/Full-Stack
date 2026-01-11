@@ -9,12 +9,12 @@ export default function AdminLayout() {
 
   return (
     <div className="min-h-screen bg-gray-100 flex">
-      {/* ===== DESKTOP SIDEBAR ===== */}
+      
       <aside className="hidden lg:block fixed left-0 top-0 h-screen w-[260px]">
         <Sidebar />
       </aside>
 
-      {/* ===== MOBILE OVERLAY ===== */}
+      
       {open && (
         <div
           className="fixed inset-0 bg-black/40 z-40 lg:hidden"
@@ -22,7 +22,7 @@ export default function AdminLayout() {
         />
       )}
 
-      {/* ===== MOBILE MENU ===== */}
+      {/* mobile-menu */}
       {open && (
         <div className="fixed top-0 left-0 w-full z-50 lg:hidden">
           <div className="flex items-center justify-between px-4 py-3 bg-white shadow">
@@ -36,9 +36,9 @@ export default function AdminLayout() {
         </div>
       )}
 
-      {/* ===== MAIN CONTENT ===== */}
+      {/* main content */}
       <div className="flex-1 lg:ml-[260px]">
-        {/* MOBILE HEADER */}
+        
         <header className="lg:hidden bg-white shadow px-4 py-3 flex items-center">
           <button
             onClick={() => setOpen(true)}

@@ -20,7 +20,7 @@ export default function InventoryTree({ openModal }) {
     selectedProduct,
   } = useSelector((state) => state.inventory);
 
-  /* ================= TOGGLE CATEGORY ================= */
+
   const handleCategoryToggle = async (category) => {
     try {
       await ApiService.updateCategory(category.id, {
@@ -32,7 +32,7 @@ export default function InventoryTree({ openModal }) {
     }
   };
 
-  /* ================= TOGGLE SUB CATEGORY ================= */
+  
   const handleSubCategoryToggle = async (categoryId, sub) => {
     try {
       await ApiService.updateSubCategory(categoryId, sub.id, {
@@ -46,7 +46,7 @@ export default function InventoryTree({ openModal }) {
 
   return (
     <div className="h-full overflow-y-auto bg-white">
-      {/* HEADER */}
+     
       <div className="px-4 py-3 border-b flex justify-between items-center">
         <h2 className="font-semibold">Inventory</h2>
         <button
@@ -57,7 +57,7 @@ export default function InventoryTree({ openModal }) {
         </button>
       </div>
 
-      {/* TREE */}
+    {/* tree */}
       <div className="p-2">
         {Array.isArray(categories) &&
           categories.map((category) => {
@@ -90,7 +90,7 @@ export default function InventoryTree({ openModal }) {
                   onToggle={() => handleCategoryToggle(category)}
                 />
 
-                {/* ✅ ADD SUB CATEGORY (RESTORED) */}
+                {/*  ADD SUB CATEGORY  */}
                 {openCat && category.status && (
                   <button
                     className="ml-6 mt-1 text-xs text-blue-600 hover:underline"
@@ -106,7 +106,7 @@ export default function InventoryTree({ openModal }) {
                   </button>
                 )}
 
-                {/* SUB CATEGORIES */}
+                {/* SUB-CATEGORIES */}
                 {openCat &&
                   Array.isArray(category.subCategories) &&
                   category.subCategories.map((sub) => {
@@ -144,7 +144,7 @@ export default function InventoryTree({ openModal }) {
                           }
                         />
 
-                        {/* ✅ ADD PRODUCT (RESTORED) */}
+                        {/*  ADD PRODUCT*/}
                         {openSub && sub.status && (
                           <button
                             className="ml-6 mt-1 text-xs text-green-600 hover:underline"
@@ -197,7 +197,7 @@ export default function InventoryTree({ openModal }) {
   );
 }
 
-/* ================= ROW ================= */
+
 function Row({
   open,
   label,

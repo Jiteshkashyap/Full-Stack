@@ -17,7 +17,7 @@ export default function AddProductForm({
   });
 
   const [images, setImages] = useState([]);
-  const [loading, setLoading] = useState(false); // 🔥 loader state
+  const [loading, setLoading] = useState(false); 
 
   useEffect(() => {
     if (mode === "edit" && initialData) {
@@ -38,9 +38,9 @@ export default function AddProductForm({
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (loading) return; // 🛑 prevent double submit
+    if (loading) return; 
 
-    setLoading(true); // 🔥 start loader
+    setLoading(true); 
 
     try {
       const formData = new FormData();
@@ -53,11 +53,11 @@ export default function AddProductForm({
 
       images.forEach((img) => formData.append("images", img));
 
-      await onSubmit(formData); // 👈 wait for API
+      await onSubmit(formData); 
     } catch (err) {
       console.error("Product submit failed", err);
     } finally {
-      setLoading(false); // 🔥 stop loader
+      setLoading(false); 
     }
   };
 
@@ -96,7 +96,7 @@ export default function AddProductForm({
         />
       </div>
 
-      {/* DESCRIPTION */}
+      
       <div>
         <label className="text-sm text-gray-600">Description</label>
         <textarea
@@ -108,7 +108,7 @@ export default function AddProductForm({
         />
       </div>
 
-      {/* EXISTING IMAGES (EDIT MODE) */}
+     
       {mode === "edit" && initialData.images?.length > 0 && (
         <div>
           <p className="text-sm text-gray-600 mb-2">Existing Images</p>
@@ -125,7 +125,7 @@ export default function AddProductForm({
         </div>
       )}
 
-      {/* FILE INPUT */}
+      
       <div>
         <label className="text-sm text-gray-600">Upload Images</label>
         <input
@@ -137,7 +137,7 @@ export default function AddProductForm({
         />
       </div>
 
-      {/* ACTION BUTTON */}
+     
       <div className="flex justify-end">
         <button
           type="submit"
@@ -161,7 +161,7 @@ export default function AddProductForm({
   );
 }
 
-/* ----------------- SMALL INPUT COMPONENT ----------------- */
+
 
 function Input({ label, ...props }) {
   return (

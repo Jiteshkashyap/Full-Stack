@@ -7,7 +7,7 @@ export default function SubCategoryForm({ defaultValue = "", onSubmit }) {
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        onSubmit(name); // ✅ string, not object
+        onSubmit(name); 
       }}
       className="space-y-4"
     >

@@ -16,19 +16,19 @@ export default function Sidebar() {
 
   const handleLogout = () => {
     dispatch(logout());
-    navigate("/"); // redirect to login
+    navigate("/"); 
   };
 
   return (
     <aside className="fixed left-0 top-0 h-screen w-[260px] bg-slate-900 text-slate-200flex flex-col hidden lg:flex">
-      {/* Logo */}
+     
       <div className="px-6 py-5 border-b border-slate-800">
         <h2 className="text-lg text-white font-semibold tracking-wide">
           Delivery Admin
         </h2>
       </div>
 
-      {/* Menu */}
+      {/* menu */}
       <nav className="flex-1 py-4 space-y-1">
         <MenuItem to="/dashboard" icon={LayoutDashboard} label="Dashboard" />
         <MenuItem to="/inventory" icon={Package} label="Inventory" />

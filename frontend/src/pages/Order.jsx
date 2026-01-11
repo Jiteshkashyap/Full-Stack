@@ -13,7 +13,7 @@ const ORDERS = [
   {
     id: "SO-00002",
     date: "04 Aug 2015",
-    customer: "Mr. James Beckman",
+    customer: " James Beckman",
     status: "FULFILLED",
     shipped: true,
     amount: 699.0,
@@ -37,7 +37,7 @@ const ORDERS = [
   {
     id: "SO-00005",
     date: "05 Aug 2015",
-    customer: "Mr. James Beckman",
+    customer: " James Beckman",
     status: "SHIPPED",
     shipped: false,
     amount: 39.99,
@@ -45,7 +45,7 @@ const ORDERS = [
   {
     id: "SO-00006",
     date: "05 Aug 2015",
-    customer: "Mr. James Beckman",
+    customer: " James Beckman",
     status: "PARTIALLY SHIPPED",
     shipped: true,
     amount: 300.0,
@@ -63,7 +63,7 @@ export default function Orders() {
 
   return (
     <div className="p-6 bg-gray-100 h-full">
-      {/* HEADER */}
+     
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-xl font-semibold">All Sales Orders</h1>
 
@@ -112,7 +112,7 @@ export default function Orders() {
         </div>
       </div>
 
-      {/* TABLE */}
+      
       <div className="bg-white rounded border overflow-x-auto">
 
         <table className="w-full text-sm">

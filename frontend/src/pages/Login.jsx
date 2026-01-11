@@ -7,32 +7,32 @@ import ApiService from "../components/ApiServices/ApiService";
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [loading, setLoading] = useState(false); // 🔥 loader
+  const [loading, setLoading] = useState(false); 
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    if (loading) return; // 🛑 prevent double submit
+    if (loading) return; 
 
     setLoading(true);
 
     try {
-      const res = await ApiService.adminLogin({ email, password });
+      const res = await ApiService.adminLogin({ email, password })
 
-      // ✅ Store token
-      localStorage.setItem("token", res.data.token);
+      
+      localStorage.setItem("token", res.data.token)
 
-      // ✅ Store admin info
-      dispatch(loginSuccess(res.data.user));
+    
+      dispatch(loginSuccess(res.data.user))
 
-      // ✅ Redirect
+      
       navigate("/dashboard");
     } catch (err) {
-      alert("Invalid email or password");
+      alert("Invalid email or password")
     } finally {
-      setLoading(false); // 🔥 stop loader
+      setLoading(false)
     }
   };
 
@@ -65,11 +65,10 @@ export default function Login() {
           </div>
 
           <button
-            type="submit"
+          type="submit"
             disabled={loading}
             className={`w-full py-3 rounded-md font-medium text-white transition ${
-              loading
-                ? "bg-blue-400 cursor-not-allowed"
+              loading ? "bg-blue-400 cursor-not-allowed"
                 : "bg-blue-600 hover:bg-blue-700"
             }`}
           >

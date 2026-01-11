@@ -43,7 +43,7 @@ const statusStyle = (status) =>
 export default function Users() {
   return (
     <div className="p-6 bg-gray-100 h-full">
-      {/* HEADER */}
+      
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-xl font-semibold">Users</h1>
 

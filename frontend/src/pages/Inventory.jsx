@@ -4,12 +4,10 @@ import { useDispatch } from "react-redux";
 import InventoryTree from "../components/InventoryTree";
 import ProductDetails from "../components/ProductDetails";
 import CrudModal from "../components/modals/CrudModal";
-
 import AddCategoryForm from "../components/forms/AddCategoryForm";
 import SubCategoryForm from "../components/forms/SubCategoryForm";
 import AddProductForm from "../components/forms/AddProductForm";
 import CategoryForm from "../components/forms/CatgeoryForms";
-
 import ApiService from "../components/ApiServices/ApiService";
 
 import {
@@ -34,7 +32,7 @@ export default function Inventory() {
     type: null,
     data: null,
   });
-  // 🔑 helper to safely extract id
+  
   const getId = (value) =>
   typeof value === "string" ? value : value?._id;
 
@@ -42,7 +40,7 @@ export default function Inventory() {
   const closeModal = () =>
     setModal({ open: false, type: null, data: null });
 
-  /* ================= BUILD INVENTORY TREE ================= */
+  //tree
   const buildInventoryTree = (categories, subCategories, products) => {
     return categories.map((cat) => ({
       id: cat._id,
@@ -64,9 +62,8 @@ export default function Inventory() {
     }));
   };
 
-  /* ================= LOAD DATA ================= */
-  useEffect(() => {
-    async function loadInventory() {
+  
+  useEffect(() => { async function loadInventory() {
       try {
         const [catRes, subRes, prodRes] = await Promise.all([
           ApiService.getAllCategories(),
@@ -96,7 +93,7 @@ export default function Inventory() {
   return (
     <div className="flex flex-col lg:flex-row h-screen bg-gray-100">
 
-      {/* LEFT INVENTORY TREE */}
+      
       <div
   className="w-full lg:w-[360px] bg-white border-b lg:border-b-0 lg:border-r max-h-[40vh] lg:max-h-full overflow-y-auto
   "
@@ -105,15 +102,15 @@ export default function Inventory() {
         <InventoryTree openModal={setModal} />
       </div>
 
-      {/* RIGHT PRODUCT DETAILS */}
+      
       <div className="flex-1 overflow-y-auto">
 
         <ProductDetails openModal={setModal} />
       </div>
 
-      {/* MODALS */}
+   
       <CrudModal isOpen={modal.open} title={modal.type} onClose={closeModal}>
-        {/* ================= CATEGORY ================= */}
+        {/* category */}
         {modal.type === "add-category" && (
           <AddCategoryForm
             onSubmit={async (name) => {
@@ -158,7 +155,7 @@ export default function Inventory() {
           />
         )}
 
-        {/* ================= SUB CATEGORY ================= */}
+        {/* sub-category */}
         {modal.type === "add-sub" && (
           <SubCategoryForm
             onSubmit={async (name) => {
@@ -217,7 +214,7 @@ dispatch(selectSubCategory(res.data._id));
           />
         )}
 
-        {/* ================= ADD PRODUCT ================= */}
+        {/* add-product */}
         {modal.type === "add-product" && (
           <AddProductForm
             categoryId={modal.data.categoryId}
@@ -246,7 +243,7 @@ dispatch(selectSubCategory(res.data._id));
             }}
           />
         )}
-        {/* ================= EDIT PRODUCT ================= */}
+      {/* edit-product */}
         {modal.type === "edit-product" && (
   <AddProductForm
     mode="edit"
@@ -272,7 +269,7 @@ dispatch(selectSubCategory(res.data._id));
     }}
   />
          )}
-         {/* ================= DELETE PRODUCT ================= */}
+         {/* delete-product */}
          {modal.type === "delete-product" && (
   <DeleteConfirm
     name={modal.data.productName}
@@ -293,7 +290,7 @@ dispatch(selectSubCategory(res.data._id));
   );
 }
 
-/* ================= DELETE CONFIRM ================= */
+
 function DeleteConfirm({ name, onConfirm, onCancel }) {
   return (
     <div>

@@ -1,7 +1,7 @@
 import axios from "axios";
-import { get } from "mongoose";
 
-const BASE_URL = "http://localhost:8000";
+
+const BASE_URL = "https://full-stack-vba3.onrender.com";
 
 class ApiServices {
 
@@ -27,7 +27,7 @@ class ApiServices {
 
 
 
-    /* ================= CATEGORY ================= */
+  // Category
 
   createCategory(data) {
     return axios.post(
@@ -58,7 +58,7 @@ class ApiServices {
       this.getToken()
     );
   }
-  /* ================= SUB CATEGORY ================= */
+  // sub category
 
 // Create Sub-Category
 createSubCategory(categoryId, data) {

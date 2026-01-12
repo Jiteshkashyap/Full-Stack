@@ -20,7 +20,7 @@ const PORT = process.env.PORT ||5000
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://full-stack-rhua-git-master-jiteshs-projects-9eeb9f01.vercel.app"
+  "https://full-stack-rhua.vercel.app"
 ];
 
 app.use(

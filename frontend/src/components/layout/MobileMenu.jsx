@@ -1,13 +1,25 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import {
   LayoutDashboard,
   Package,
   ShoppingCart,
   Users,
   Truck,
+  LogOut,
 } from "lucide-react";
+import { logout } from "../redux/slice/authSlice";
 
 export default function MobileMenu({ onClose }) {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    dispatch(logout());
+    navigate("/");
+    onClose?.(); // close mobile menu if exists
+  };
+
   const linkClass = ({ isActive }) =>
     `flex items-center gap-3 px-4 py-3 rounded-md text-sm font-medium
      ${
@@ -42,6 +54,15 @@ export default function MobileMenu({ onClose }) {
         <ShoppingCart size={18} />
         Orders
       </NavLink>
+
+      {/* 🔴 Logout Button */}
+      <button
+        onClick={handleLogout}
+        className="flex items-center gap-3 px-4 py-3 rounded-md text-sm font-medium text-red-600 hover:bg-red-50 w-full"
+      >
+        <LogOut size={18} />
+        Logout
+      </button>
     </div>
   );
 }
